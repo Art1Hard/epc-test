@@ -1,0 +1,32 @@
+@use "colors";
+
+html {
+	overflow-x: hidden;
+}
+
+body {
+	overflow-x: hidden;
+	font-family: "Actay";
+	font-size: 14px;
+	color: colors.$primary;
+}
+
+a {
+	color: colors.$primary;
+}
+
+.img {
+	background-image: url("@img/cover.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	width: 200px;
+	height: 200px;
+}
+
+.container {
+	width: 100%;
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}

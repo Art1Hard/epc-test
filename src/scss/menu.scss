@@ -1,0 +1,27 @@
+.menuOpen {
+	.header {
+		&__burger {
+			display: none;
+		}
+
+		&__menu-row {
+			display: flex;
+		}
+
+		&__logo {
+			color: #f2f3ef;
+			padding-top: 8px;
+		}
+	}
+
+	.nav {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.header.menuOpen {
+	&::before {
+		display: block;
+	}
+}

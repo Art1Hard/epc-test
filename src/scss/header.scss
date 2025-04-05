@@ -1,0 +1,84 @@
+@use "colors";
+
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-top: 40px;
+
+	@media (max-width: 1160px) {
+		margin-top: 30px;
+
+		&::before {
+			display: none;
+			content: "";
+			position: fixed;
+			inset: 0;
+			z-index: 5;
+			background-color: colors.$secondary;
+			opacity: 0.5;
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__left {
+		display: flex;
+		gap: 52px;
+		align-items: center;
+
+		@media (min-width: 1161px) {
+			font-size: 20px;
+			width: 100%;
+		}
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 100;
+		display: block;
+		margin-top: -9px;
+		font-family: "ActayWide";
+		font-size: 32px;
+		line-height: 1;
+
+		@media (max-width: 1160px) {
+			font-size: 20px;
+		}
+	}
+
+	&__menu-row {
+		position: relative;
+		z-index: 100;
+		display: none;
+
+		@media (max-width: 1160px) {
+			align-items: center;
+		}
+	}
+
+	&__menu-text {
+		text-transform: capitalize;
+		color: colors.$secondary;
+		margin-right: 10px;
+		font-size: 12px;
+	}
+
+	&__menu-close {
+		max-width: 40px;
+		max-height: 40px;
+	}
+
+	&__burger {
+		display: none;
+
+		@media (max-width: 1160px) {
+			display: block;
+		}
+	}
+}
